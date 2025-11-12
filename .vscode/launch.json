@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "beer_lib_24",
+            "name": "beer_lib_25",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "beer_lib_24 (profile mode)",
+            "name": "beer_lib_25 (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "beer_lib_24 (release mode)",
+            "name": "beer_lib_25 (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
