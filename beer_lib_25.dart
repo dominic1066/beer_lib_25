@@ -1,7 +1,7 @@
 /// Support for doing something awesome.
 ///
 /// More dartdocs go here.
-library beer_lib_2;
+library beer_lib_25;
 
 export 'src/beer_info.dart';
 export 'src/beer_service.dart';
