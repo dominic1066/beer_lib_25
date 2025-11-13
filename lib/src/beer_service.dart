@@ -10,9 +10,7 @@ class BeerListService {
   Map<int, String> columnMappings = <int, String>{};
 
 
-  BeerListService() {
-
-  }
+  BeerListService();
 
 
 
@@ -38,9 +36,9 @@ class BeerListService {
       Uri changeStatusURI = Uri(
           host: "script.google.com",
           path: Secrets.scriptPath,
-          query: "action=changeStatus&" + newStatusStr + "=" + beer1.key(),
+          query: "action=changeStatus&$newStatusStr=${beer1.key()}",
           scheme: "https");
-      print("URI:" + changeStatusURI.toString());
+      print("URI:$changeStatusURI");
       await http.get(changeStatusURI).then((response) {
         print(convert.jsonDecode(response.body)['status']);
       });
@@ -67,9 +65,9 @@ class BeerListService {
       Uri changeStatusURI = Uri(
           host: "script.google.com",
           path: Secrets.scriptPath,
-          query: "action=changeStatus&" + newStatusStr + "=" + beer2.key(),
+          query: "action=changeStatus&$newStatusStr=${beer2.key()}",
           scheme: "https");
-      print("URI:" + changeStatusURI.toString());
+      print("URI:$changeStatusURI");
       await http.get(changeStatusURI).then((response) {
         print(convert.jsonDecode(response.body)['status']);
       });
@@ -103,9 +101,9 @@ class BeerListService {
           host: "script.google.com",
           path: Secrets.scriptPath,
           query:
-              "action=changeStatus&" + newStatusStr + "=" + currentBeer.key(),
+              "action=changeStatus&$newStatusStr=${currentBeer.key()}",
           scheme: "https");
-      print("URI:" + changeStatusURI.toString());
+      print("URI:$changeStatusURI");
       await http.get(changeStatusURI).then((response) {
         print(convert.jsonDecode(response.body)['status']);
       });

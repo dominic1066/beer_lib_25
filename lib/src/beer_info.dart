@@ -31,8 +31,8 @@ class BeerInfo {
   String comments = "";
   int rowNum = 0;
 
-  BeerInfo.dontUse(String _name) {
-    name = _name;
+  BeerInfo.dontUse(String name) {
+    name = name;
   }
 
   BeerInfo(sheetRow, Map<int, String> columnMappings) {
@@ -108,10 +108,10 @@ class BeerInfo {
   }
 
   String fullName() {
-    return brewery + ' ' + name;
+    return '$brewery $name';
   }
 
   String key() {
-    return brewery + '|' + name + '|' + style + '|' + handpump;
+    return '$brewery|$name|$style|$handpump';
   }
 }
